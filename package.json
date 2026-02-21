@@ -4,8 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bun build index.ts --compile --outfile anthropic-repro",
-    "build:all": "bun build index.ts --compile --target=bun-linux-x64 --outfile dist/anthropic-repro-linux-x64 && bun build index.ts --compile --target=bun-linux-arm64 --outfile dist/anthropic-repro-linux-arm64 && bun build index.ts --compile --target=bun-darwin-x64 --outfile dist/anthropic-repro-darwin-x64 && bun build index.ts --compile --target=bun-darwin-arm64 --outfile dist/anthropic-repro-darwin-arm64 && bun build index.ts --compile --target=bun-windows-x64 --outfile dist/anthropic-repro-windows-x64.exe"
+    "build": "bun build index.ts ./node_modules/@anthropic-ai/claude-agent-sdk/cli.js --compile --outfile anthropic-repro",
+    "build:all": "bun build index.ts ./node_modules/@anthropic-ai/claude-agent-sdk/cli.js --compile --target=bun-linux-x64 --outfile dist/anthropic-repro-linux-x64 && bun build index.ts ./node_modules/@anthropic-ai/claude-agent-sdk/cli.js --compile --target=bun-linux-arm64 --outfile dist/anthropic-repro-linux-arm64 && bun build index.ts ./node_modules/@anthropic-ai/claude-agent-sdk/cli.js --compile --target=bun-darwin-x64 --outfile dist/anthropic-repro-darwin-x64 && bun build index.ts ./node_modules/@anthropic-ai/claude-agent-sdk/cli.js --compile --target=bun-darwin-arm64 --outfile dist/anthropic-repro-darwin-arm64 && bun build index.ts ./node_modules/@anthropic-ai/claude-agent-sdk/cli.js --compile --target=bun-windows-x64 --outfile dist/anthropic-repro-windows-x64.exe"
   },
   "devDependencies": {
     "@types/bun": "latest"
@@ -14,6 +14,6 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@anthropic-ai/claude-agent-sdk": "^0.2.41"
+    "@anthropic-ai/claude-agent-sdk": "0.2.50"
   }
 }

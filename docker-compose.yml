@@ -2,4 +2,6 @@ services:
   app:
     build: .
     environment:
-      - ANTHROPIC_API_KEY=INVALID-KEY-DOES-NOT-MATTER
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    volumes:
+      - ./dist/:/dist
